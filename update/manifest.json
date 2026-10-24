@@ -1,0 +1,16 @@
+{
+  "version": "0.5.0",
+  "release_date": "2026-10-24",
+  "min_required_version": "0.5.0",
+  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.0/TrueRespi-0.5.0-Setup.exe",
+  "portable_url": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.0/TrueRespi-0.5.0-win64-portable.zip",
+  "sha256": "PENDING",
+  "editions": {
+    "standard": {
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.0/TrueRespi-0.5.0-Setup.exe",
+      "sha256": "PENDING"
+    }
+  },
+  "release_notes_zh": "TrueRespi 0.5.0 首个公开发布版本：新增全部数据 Excel（每秒/每分钟呼吸指标）、应用内更新、正式化帮助与关于页；优化 AI 分析与模式切换体验。详见发布页。",
+  "release_notes_en": "TrueRespi 0.5.0 first public release: all-data Excel export (per-second/per-minute respiratory metrics), in-app updates, redesigned help/About, and faster AI analysis."
+}
