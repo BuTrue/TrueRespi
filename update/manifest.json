@@ -4,11 +4,11 @@
   "min_required_version": "0.5.0",
   "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.0/TrueRespi-0.5.0-Setup.exe",
   "portable_url": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.0/TrueRespi-0.5.0-win64-portable.zip",
-  "sha256": "8f5917ca09274cb662e5db29a03f1b1030cb1b20dc72d418aa92828bec9ca09a",
+  "sha256": "284e313150041ab418cc91b130b8c70b09e6701b3641226351080ed16287817b",
   "editions": {
     "standard": {
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.0/TrueRespi-0.5.0-Setup.exe",
-      "sha256": "8f5917ca09274cb662e5db29a03f1b1030cb1b20dc72d418aa92828bec9ca09a"
+      "sha256": "284e313150041ab418cc91b130b8c70b09e6701b3641226351080ed16287817b"
     }
   },
   "release_notes_zh": "TrueRespi 0.5.0 首个公开发布版本：新增全部数据 Excel（每秒/每分钟呼吸指标）、应用内更新、正式化帮助与关于页；优化 AI 分析与模式切换体验。详见发布页。",
