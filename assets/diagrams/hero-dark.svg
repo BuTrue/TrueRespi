@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560" role="img" aria-label="TrueRespi — 小鼠呼吸波形行为标注分析系统界面示意">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1220"/><stop offset="1" stop-color="#101E31"/></linearGradient>
+<radialGradient id="glow" cx="0.18" cy="0.05" r="0.8"><stop offset="0" stop-color="#2DD4BF" stop-opacity="0.13"/><stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow2" cx="0.9" cy="0.95" r="0.7"><stop offset="0" stop-color="#5BB8F9" stop-opacity="0.10"/><stop offset="1" stop-color="#5BB8F9" stop-opacity="0"/></radialGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset="1" stop-color="#fff" stop-opacity="0.62"/></linearGradient>
+<mask id="plotfade"><rect x="658" y="98" width="532" height="280" fill="url(#fade)"/></mask>
+</defs>
+<rect width="1280" height="560" fill="url(#bg)"/>
+<rect width="1280" height="560" fill="url(#glow)"/>
+<rect width="1280" height="560" fill="url(#glow2)"/>
+<path d="M0 0V560 M24 0V560 M48 0V560 M72 0V560 M96 0V560 M120 0V560 M144 0V560 M168 0V560 M192 0V560 M216 0V560 M240 0V560 M264 0V560 M288 0V560 M312 0V560 M336 0V560 M360 0V560 M384 0V560 M408 0V560 M432 0V560 M456 0V560 M480 0V560 M504 0V560 M528 0V560 M552 0V560 M576 0V560 M600 0V560 M624 0V560 M648 0V560 M672 0V560 M696 0V560 M720 0V560 M744 0V560 M768 0V560 M792 0V560 M816 0V560 M840 0V560 M864 0V560 M888 0V560 M912 0V560 M936 0V560 M960 0V560 M984 0V560 M1008 0V560 M1032 0V560 M1056 0V560 M1080 0V560 M1104 0V560 M1128 0V560 M1152 0V560 M1176 0V560 M1200 0V560 M1224 0V560 M1248 0V560 M1272 0V560 M0 0H1280 M0 24H1280 M0 48H1280 M0 72H1280 M0 96H1280 M0 120H1280 M0 144H1280 M0 168H1280 M0 192H1280 M0 216H1280 M0 240H1280 M0 264H1280 M0 288H1280 M0 312H1280 M0 336H1280 M0 360H1280 M0 384H1280 M0 408H1280 M0 432H1280 M0 456H1280 M0 480H1280 M0 504H1280 M0 528H1280 M0 552H1280" stroke="#1A2941" stroke-width="1" opacity="0.45" fill="none"/>
+<g font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif">
+<text x="64" y="150" font-size="13" letter-spacing="2.6" fill="#2DD4BF" font-weight="600">小鼠呼吸 · 行为标注 · 分析工作台</text>
+<text x="64" y="224" font-size="76" font-weight="700" fill="#E8EFF9" letter-spacing="-1.5">TrueRespi</text>
+<text x="494" y="176" font-family="Consolas,SFMono-Regular,Menlo,DejaVu Sans Mono,monospace" font-size="15" fill="#2DD4BF" stroke="#25374F" stroke-width="1" paint-order="stroke">v0.5.1</text>
+<text x="64" y="276" font-size="21" fill="#8FA3BF">为清醒小鼠全身体积描记而生的</text>
+<text x="64" y="308" font-size="21" fill="#8FA3BF">本地标注与分析工具</text>
+<rect x="64" y="356" width="153.5" height="34" rx="17" fill="#132135" stroke="#25374F"/>
+<circle cx="83" cy="373" r="4" fill="#2DD4BF"/>
+<text x="97" y="378" font-size="14.5" fill="#E8EFF9">自定义行为标签</text>
+<rect x="227.5" y="356" width="181.8" height="34" rx="17" fill="#132135" stroke="#25374F"/>
+<circle cx="246.5" cy="373" r="4" fill="#5BB8F9"/>
+<text x="260.5" y="378" font-size="14.5" fill="#E8EFF9">emka IOX 指标口径</text>
+<rect x="64" y="400" width="157.8" height="34" rx="17" fill="#132135" stroke="#25374F"/>
+<circle cx="83" cy="417" r="4" fill="#FBBF24"/>
+<text x="97" y="422" font-size="14.5" fill="#E8EFF9">Excel 一键统计</text>
+<rect x="231.8" y="400" width="139" height="34" rx="17" fill="#132135" stroke="#25374F"/>
+<circle cx="250.8" cy="417" r="4" fill="#8B9CF9"/>
+<text x="264.9" y="422" font-size="14.5" fill="#E8EFF9">全程离线处理</text>
+<text x="64" y="476" font-size="14" fill="#61748F">Windows 10 / 11 · 数据全程本地处理，不上传录音</text>
+</g>
+<rect x="566" y="58" width="650" height="384" rx="18" fill="#0F1B2C" stroke="#25374F"/>
+<path d="M584 59H1198" stroke="#152439" stroke-width="2" fill="none" opacity="0.9"/>
+<path d="M566 94H1216" stroke="#25374F" fill="none"/>
+<circle cx="588" cy="76" r="4.5" fill="#FB7185" opacity="0.75"/>
+<circle cx="604" cy="76" r="4.5" fill="#FBBF24" opacity="0.75"/>
+<circle cx="620" cy="76" r="4.5" fill="#2DD4BF" opacity="0.75"/>
+<text x="650" y="81" font-family="Consolas,SFMono-Regular,Menlo,DejaVu Sans Mono,monospace" font-size="12" fill="#8FA3BF">260726-con2-8-9.txt</text>
+<rect x="1106" y="66" width="92" height="20" rx="10" fill="#132135" stroke="#25374F"/>
+<text x="1152.0" y="80" font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif" font-size="12" fill="#2DD4BF" text-anchor="middle" font-weight="600">标注模式</text>
+<g mask="url(#plotfade)">
+<path d="M658 106H1190" stroke="#1C2B41" stroke-width="1" fill="none"/>
+<path d="M658 150H1190" stroke="#1C2B41" stroke-width="1" fill="none"/>
+<path d="M658 236H1190" stroke="#1C2B41" stroke-width="1" fill="none"/>
+<path d="M658 216H1190" stroke="#1C2B41" stroke-width="1" fill="none"/>
+<rect x="808" y="98" width="150" height="274" fill="#2DD4BF" opacity="0.07"/>
+<path d="M808 98V370" stroke="#2DD4BF" stroke-width="1" stroke-dasharray="3 3" opacity="0.75" fill="none"/>
+<path d="M958 98V370" stroke="#2DD4BF" stroke-width="1" stroke-dasharray="3 3" opacity="0.75" fill="none"/>
+<path d="M658,220 L659.6,217.5 L661.2,215.1 L662.8,212.9 L664.3,210.8 L665.9,209.1 L667.5,207.6 L669.1,206.5 L670.7,205.9 L672.2,205.6 L673.8,205.7 L675.4,205.9 L677,206.3 L678.6,206.8 L680.2,207.5 L681.8,208.3 L683.3,209.2 L684.9,210.3 L686.5,211.5 L688.1,212.7 L689.7,214.1 L691.2,215.5 L692.8,217 L694.4,218.5 L696,220 L696,220 L697.6,217.5 L699.2,215.1 L700.8,212.9 L702.3,210.8 L703.9,209.1 L705.5,207.6 L707.1,206.5 L708.7,205.9 L710.2,205.6 L711.8,205.7 L713.4,205.9 L715,206.3 L716.6,206.8 L718.2,207.5 L719.8,208.3 L721.3,209.2 L722.9,210.3 L724.5,211.5 L726.1,212.7 L727.7,214.1 L729.2,215.5 L730.8,217 L732.4,218.5 L734,220 L734,220 L735.6,217.5 L737.2,215.1 L738.8,212.9 L740.3,210.8 L741.9,209.1 L743.5,207.6 L745.1,206.5 L746.7,205.9 L748.2,205.6 L749.8,205.7 L751.4,205.9 L753,206.3 L754.6,206.8 L756.2,207.5 L757.8,208.3 L759.3,209.2 L760.9,210.3 L762.5,211.5 L764.1,212.7 L765.7,214.1 L767.2,215.5 L768.8,217 L770.4,218.5 L772,220 L772,220 L773.6,217.5 L775.2,215.1 L776.8,212.9 L778.3,210.8 L779.9,209.1 L781.5,207.6 L783.1,206.5 L784.7,205.9 L786.2,205.6 L787.8,205.7 L789.4,205.9 L791,206.3 L792.6,206.8 L794.2,207.5 L795.8,208.3 L797.3,209.2 L798.9,210.3 L800.5,211.5 L802.1,212.7 L803.7,214.1 L805.2,215.5 L806.8,217 L808.4,218.5 L810,220 L810,220 L811.6,217.5 L813.2,215.1 L814.8,212.9 L816.3,210.8 L817.9,209.1 L819.5,207.6 L821.1,206.5 L822.7,205.9 L824.2,205.6 L825.8,205.7 L827.4,205.9 L829,206.3 L830.6,206.8 L832.2,207.5 L833.8,208.3 L835.3,209.2 L836.9,210.3 L838.5,211.5 L840.1,212.7 L841.7,214.1 L843.2,215.5 L844.8,217 L846.4,218.5 L848,220 L848,220 L849.8,216.4 L851.6,212.9 L853.4,209.5 L855.2,206.2 L857.1,203.1 L858.9,200.3 L860.7,197.8 L862.5,195.6 L864.3,193.8 L866.1,192.3 L867.9,191.3 L869.7,190.7 L871.5,190.5 L873.3,190.6 L875.2,191 L877,191.5 L878.8,192.3 L880.6,193.3 L882.4,194.4 L884.2,195.8 L886,197.3 L887.8,198.9 L889.6,200.7 L891.5,202.5 L893.3,204.5 L895.1,206.5 L896.9,208.5 L898.7,210.5 L900.5,212.5 L902.3,214.4 L904.1,216.1 L905.9,217.8 L907.7,219.1 L909.6,220 L909.6,220 L911.1,217.5 L912.7,215.1 L914.3,212.9 L915.9,210.8 L917.5,209.1 L919.1,207.6 L920.6,206.5 L922.2,205.9 L923.8,205.6 L925.4,205.7 L927,205.9 L928.6,206.3 L930.1,206.8 L931.7,207.5 L933.3,208.3 L934.9,209.2 L936.5,210.3 L938.1,211.5 L939.6,212.7 L941.2,214.1 L942.8,215.5 L944.4,217 L946,218.5 L947.6,220 L947.6,220 L949.1,217.5 L950.7,215.1 L952.3,212.9 L953.9,210.8 L955.5,209.1 L957.1,207.6 L958.6,206.5 L960.2,205.9 L961.8,205.6 L963.4,205.7 L965,205.9 L966.6,206.3 L968.1,206.8 L969.7,207.5 L971.3,208.3 L972.9,209.2 L974.5,210.3 L976.1,211.5 L977.6,212.7 L979.2,214.1 L980.8,215.5 L982.4,217 L984,218.5 L985.6,220 L985.6,220 L987.1,217.5 L988.7,215.1 L990.3,212.9 L991.9,210.8 L993.5,209.1 L995.1,207.6 L996.6,206.5 L998.2,205.9 L999.8,205.6 L1001.4,205.7 L1003,205.9 L1004.6,206.3 L1006.1,206.8 L1007.7,207.5 L1009.3,208.3 L1010.9,209.2 L1012.5,210.3 L1014.1,211.5 L1015.6,212.7 L1017.2,214.1 L1018.8,215.5 L1020.4,217 L1022,218.5 L1023.6,220 L1023.6,220 L1025.1,217.5 L1026.7,215.1 L1028.3,212.9 L1029.9,210.8 L1031.5,209.1 L1033.1,207.6 L1034.6,206.5 L1036.2,205.9 L1037.8,205.6 L1039.4,205.7 L1041,205.9 L1042.6,206.3 L1044.1,206.8 L1045.7,207.5 L1047.3,208.3 L1048.9,209.2 L1050.5,210.3 L1052.1,211.5 L1053.6,212.7 L1055.2,214.1 L1056.8,215.5 L1058.4,217 L1060,218.5 L1061.6,220 L1061.6,220 L1063.1,217.5 L1064.7,215.1 L1066.3,212.9 L1067.9,210.8 L1069.5,209.1 L1071.1,207.6 L1072.6,206.5 L1074.2,205.9 L1075.8,205.6 L1077.4,205.7 L1079,205.9 L1080.6,206.3 L1082.1,206.8 L1083.7,207.5 L1085.3,208.3 L1086.9,209.2 L1088.5,210.3 L1090.1,211.5 L1091.6,212.7 L1093.2,214.1 L1094.8,215.5 L1096.4,217 L1098,218.5 L1099.6,220 L1099.6,220 L1101.1,217.5 L1102.7,215.1 L1104.3,212.9 L1105.9,210.8 L1107.5,209.1 L1109.1,207.6 L1110.6,206.5 L1112.2,205.9 L1113.8,205.6 L1115.4,205.7 L1117,205.9 L1118.6,206.3 L1120.1,206.8 L1121.7,207.5 L1123.3,208.3 L1124.9,209.2 L1126.5,210.3 L1128.1,211.5 L1129.6,212.7 L1131.2,214.1 L1132.8,215.5 L1134.4,217 L1136,218.5 L1137.6,220 L1137.6,220 L1139.1,217.5 L1140.7,215.1 L1142.3,212.9 L1143.9,210.8 L1145.5,209.1 L1147.1,207.6 L1148.6,206.5 L1150.2,205.9 L1151.8,205.6 L1153.4,205.7 L1155,205.9 L1156.6,206.3 L1158.1,206.8 L1159.7,207.5 L1161.3,208.3 L1162.9,209.2 L1164.5,210.3 L1166.1,211.5 L1167.6,212.7 L1169.2,214.1 L1170.8,215.5 L1172.4,217 L1174,218.5 L1175.6,220" fill="none" stroke="#5BB8F9" stroke-width="1.4" opacity="0.55"/>
+<path d="M658,234 L659.6,225.8 L661.2,217.8 L662.8,210.3 L664.3,203.5 L665.9,197.6 L667.5,192.8 L669.1,189.2 L670.7,186.9 L672.2,186 L673.8,186.2 L675.4,186.9 L677,188.2 L678.6,190 L680.2,192.2 L681.8,195 L683.3,198.1 L684.9,201.7 L686.5,205.6 L688.1,209.8 L689.7,214.3 L691.2,219.1 L692.8,223.9 L694.4,228.9 L696,234 L696,234 L697.6,225.8 L699.2,217.8 L700.8,210.3 L702.3,203.5 L703.9,197.6 L705.5,192.8 L707.1,189.2 L708.7,186.9 L710.2,186 L711.8,186.2 L713.4,186.9 L715,188.2 L716.6,190 L718.2,192.2 L719.8,195 L721.3,198.1 L722.9,201.7 L724.5,205.6 L726.1,209.8 L727.7,214.3 L729.2,219.1 L730.8,223.9 L732.4,228.9 L734,234 L734,234 L735.6,225.8 L737.2,217.8 L738.8,210.3 L740.3,203.5 L741.9,197.6 L743.5,192.8 L745.1,189.2 L746.7,186.9 L748.2,186 L749.8,186.2 L751.4,186.9 L753,188.2 L754.6,190 L756.2,192.2 L757.8,195 L759.3,198.1 L760.9,201.7 L762.5,205.6 L764.1,209.8 L765.7,214.3 L767.2,219.1 L768.8,223.9 L770.4,228.9 L772,234 L772,234 L773.6,225.8 L775.2,217.8 L776.8,210.3 L778.3,203.5 L779.9,197.6 L781.5,192.8 L783.1,189.2 L784.7,186.9 L786.2,186 L787.8,186.2 L789.4,186.9 L791,188.2 L792.6,190 L794.2,192.2 L795.8,195 L797.3,198.1 L798.9,201.7 L800.5,205.6 L802.1,209.8 L803.7,214.3 L805.2,219.1 L806.8,223.9 L808.4,228.9 L810,234 L810,234 L811.6,225.8 L813.2,217.8 L814.8,210.3 L816.3,203.5 L817.9,197.6 L819.5,192.8 L821.1,189.2 L822.7,186.9 L824.2,186 L825.8,186.2 L827.4,186.9 L829,188.2 L830.6,190 L832.2,192.2 L833.8,195 L835.3,198.1 L836.9,201.7 L838.5,205.6 L840.1,209.8 L841.7,214.3 L843.2,219.1 L844.8,223.9 L846.4,228.9 L848,234 L848,234 L849.8,222.1 L851.6,210.3 L853.4,198.9 L855.2,188 L857.1,177.8 L858.9,168.4 L860.7,160 L862.5,152.7 L864.3,146.6 L866.1,141.7 L867.9,138.3 L869.7,136.2 L871.5,135.6 L873.3,136 L875.2,137.2 L877,139.1 L878.8,141.6 L880.6,144.9 L882.4,148.8 L884.2,153.2 L886,158.2 L887.8,163.7 L889.6,169.5 L891.5,175.8 L893.3,182.2 L895.1,188.9 L896.9,195.6 L898.7,202.3 L900.5,208.9 L902.3,215.2 L904.1,221.1 L905.9,226.5 L907.7,231 L909.6,234 L909.6,234 L911.1,225.8 L912.7,217.8 L914.3,210.3 L915.9,203.5 L917.5,197.6 L919.1,192.8 L920.6,189.2 L922.2,186.9 L923.8,186 L925.4,186.2 L927,186.9 L928.6,188.2 L930.1,190 L931.7,192.2 L933.3,195 L934.9,198.1 L936.5,201.7 L938.1,205.6 L939.6,209.8 L941.2,214.3 L942.8,219.1 L944.4,223.9 L946,228.9 L947.6,234 L947.6,234 L949.1,225.8 L950.7,217.8 L952.3,210.3 L953.9,203.5 L955.5,197.6 L957.1,192.8 L958.6,189.2 L960.2,186.9 L961.8,186 L963.4,186.2 L965,186.9 L966.6,188.2 L968.1,190 L969.7,192.2 L971.3,195 L972.9,198.1 L974.5,201.7 L976.1,205.6 L977.6,209.8 L979.2,214.3 L980.8,219.1 L982.4,223.9 L984,228.9 L985.6,234 L985.6,234 L987.1,225.8 L988.7,217.8 L990.3,210.3 L991.9,203.5 L993.5,197.6 L995.1,192.8 L996.6,189.2 L998.2,186.9 L999.8,186 L1001.4,186.2 L1003,186.9 L1004.6,188.2 L1006.1,190 L1007.7,192.2 L1009.3,195 L1010.9,198.1 L1012.5,201.7 L1014.1,205.6 L1015.6,209.8 L1017.2,214.3 L1018.8,219.1 L1020.4,223.9 L1022,228.9 L1023.6,234 L1023.6,234 L1025.1,225.8 L1026.7,217.8 L1028.3,210.3 L1029.9,203.5 L1031.5,197.6 L1033.1,192.8 L1034.6,189.2 L1036.2,186.9 L1037.8,186 L1039.4,186.2 L1041,186.9 L1042.6,188.2 L1044.1,190 L1045.7,192.2 L1047.3,195 L1048.9,198.1 L1050.5,201.7 L1052.1,205.6 L1053.6,209.8 L1055.2,214.3 L1056.8,219.1 L1058.4,223.9 L1060,228.9 L1061.6,234 L1061.6,234 L1063.1,225.8 L1064.7,217.8 L1066.3,210.3 L1067.9,203.5 L1069.5,197.6 L1071.1,192.8 L1072.6,189.2 L1074.2,186.9 L1075.8,186 L1077.4,186.2 L1079,186.9 L1080.6,188.2 L1082.1,190 L1083.7,192.2 L1085.3,195 L1086.9,198.1 L1088.5,201.7 L1090.1,205.6 L1091.6,209.8 L1093.2,214.3 L1094.8,219.1 L1096.4,223.9 L1098,228.9 L1099.6,234 L1099.6,234 L1101.1,225.8 L1102.7,217.8 L1104.3,210.3 L1105.9,203.5 L1107.5,197.6 L1109.1,192.8 L1110.6,189.2 L1112.2,186.9 L1113.8,186 L1115.4,186.2 L1117,186.9 L1118.6,188.2 L1120.1,190 L1121.7,192.2 L1123.3,195 L1124.9,198.1 L1126.5,201.7 L1128.1,205.6 L1129.6,209.8 L1131.2,214.3 L1132.8,219.1 L1134.4,223.9 L1136,228.9 L1137.6,234 L1137.6,234 L1139.1,225.8 L1140.7,217.8 L1142.3,210.3 L1143.9,203.5 L1145.5,197.6 L1147.1,192.8 L1148.6,189.2 L1150.2,186.9 L1151.8,186 L1153.4,186.2 L1155,186.9 L1156.6,188.2 L1158.1,190 L1159.7,192.2 L1161.3,195 L1162.9,198.1 L1164.5,201.7 L1166.1,205.6 L1167.6,209.8 L1169.2,214.3 L1170.8,219.1 L1172.4,223.9 L1174,228.9 L1175.6,234" fill="none" stroke="#2DD4BF" stroke-width="2.1" stroke-linejoin="round"/>
+</g>
+<g font-family="Consolas,SFMono-Regular,Menlo,DejaVu Sans Mono,monospace" font-size="11" fill="#61748F">
+<text x="584" y="146">Flow</text>
+<text x="584" y="218">MV</text>
+<text x="584" y="364">Behav</text>
+</g>
+<path d="M871.4 100V344" stroke="#FBBF24" stroke-width="1" stroke-dasharray="4 3" fill="none" opacity="0.9"/>
+<path d="M871.4 100h26v13h-26z" fill="#FBBF24" opacity="0.16"/>
+<text x="875.4" y="111" font-family="Consolas,SFMono-Regular,Menlo,DejaVu Sans Mono,monospace" font-size="10" fill="#FBBF24">sigh</text>
+<text x="883" y="390" font-family="Consolas,SFMono-Regular,Menlo,DejaVu Sans Mono,monospace" font-size="10.5" fill="#8FA3BF" text-anchor="middle">选区 1.7 s · 4 次呼吸</text>
+<g>
+<rect x="658.6" y="350" width="68" height="20" rx="4" fill="#1C2B41" opacity="0.3"/>
+<text x="692.6" y="364" font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif" font-size="10.5" fill="#E8EFF9" opacity="0.85" text-anchor="middle">eupnea</text>
+<rect x="727.8" y="350" width="68" height="20" rx="4" fill="#2DD4BF" opacity="0.62"/>
+<text x="761.7" y="364" font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif" font-size="10.5" fill="#E8EFF9" opacity="0.85" text-anchor="middle">moving</text>
+<rect x="796.9" y="350" width="41.4" height="20" rx="4" fill="#FBBF24" opacity="0.62"/>
+<rect x="839.5" y="350" width="68" height="20" rx="4" fill="#1C2B41" opacity="0.3"/>
+<text x="873.5" y="364" font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif" font-size="10.5" fill="#E8EFF9" opacity="0.85" text-anchor="middle">eupnea</text>
+<rect x="908.6" y="350" width="30.7" height="20" rx="4" fill="#5BB8F9" opacity="0.62"/>
+<rect x="940.6" y="350" width="52" height="20" rx="4" fill="#2DD4BF" opacity="0.62"/>
+<text x="966.6" y="364" font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif" font-size="10.5" fill="#E8EFF9" opacity="0.85" text-anchor="middle">moving</text>
+<rect x="993.8" y="350" width="78.6" height="20" rx="4" fill="#8B9CF9" opacity="0.62"/>
+<text x="1033.1" y="364" font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif" font-size="10.5" fill="#E8EFF9" opacity="0.85" text-anchor="middle">sleep</text>
+<rect x="1073.6" y="350" width="41.4" height="20" rx="4" fill="#FBBF24" opacity="0.62"/>
+<rect x="1116.1" y="350" width="41.4" height="20" rx="4" fill="#2DD4BF" opacity="0.62"/>
+<rect x="1158.7" y="350" width="30.7" height="20" rx="4" fill="#1C2B41" opacity="0.3"/>
+</g>
+<path d="M658 410H1190" stroke="#25374F" fill="none"/>
+<g font-family="Consolas,SFMono-Regular,Menlo,DejaVu Sans Mono,monospace" font-size="10" fill="#61748F">
+<path d="M658 410v6" stroke="#25374F" fill="none"/>
+<text x="658" y="428" text-anchor="middle">00:00</text>
+<path d="M746.7 410v6" stroke="#25374F" fill="none"/>
+<text x="746.7" y="428" text-anchor="middle">00:01</text>
+<path d="M835.3 410v6" stroke="#25374F" fill="none"/>
+<text x="835.3" y="428" text-anchor="middle">00:02</text>
+<path d="M924 410v6" stroke="#25374F" fill="none"/>
+<text x="924" y="428" text-anchor="middle">00:03</text>
+<path d="M1012.7 410v6" stroke="#25374F" fill="none"/>
+<text x="1012.7" y="428" text-anchor="middle">00:04</text>
+<path d="M1101.3 410v6" stroke="#25374F" fill="none"/>
+<text x="1101.3" y="428" text-anchor="middle">00:05</text>
+</g>
+<g font-family="Segoe UI,Microsoft YaHei,PingFang SC,Noto Sans CJK SC,Helvetica,Arial,sans-serif">
+<text x="64" y="494" font-size="30" font-weight="700" fill="#E8EFF9">23<tspan font-size="14" font-weight="500" fill="#2DD4BF">列</tspan></text>
+<text x="64" y="516" font-size="13" fill="#61748F">逐呼吸输出</text>
+<text x="346" y="494" font-size="30" font-weight="700" fill="#E8EFF9">5<tspan font-size="14" font-weight="500" fill="#5BB8F9">类</tspan></text>
+<text x="346" y="516" font-size="13" fill="#61748F">行为类别</text>
+<path d="M320 472V518" stroke="#1C2B41" fill="none"/>
+<text x="628" y="494" font-size="30" font-weight="700" fill="#E8EFF9">9<tspan font-size="14" font-weight="500" fill="#FBBF24">个</tspan></text>
+<text x="628" y="516" font-size="13" fill="#61748F">行为模型</text>
+<path d="M602 472V518" stroke="#1C2B41" fill="none"/>
+<text x="910" y="494" font-size="30" font-weight="700" fill="#E8EFF9">0<tspan font-size="14" font-weight="500" fill="#8B9CF9">上传</tspan></text>
+<text x="910" y="516" font-size="13" fill="#61748F">离线处理</text>
+<path d="M884 472V518" stroke="#1C2B41" fill="none"/>
+</g>
+</svg>
