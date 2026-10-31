@@ -1,16 +1,18 @@
 {
-  "version": "0.5.1",
-  "release_date": "2026-10-25",
-  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.1/TrueRespi-0.5.1-Setup.exe",
-  "portable_url": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.1/TrueRespi-0.5.1-win64-portable.zip",
-  "sha256": "5558b7b5b4754b668f86f1bb38a893b19cb48565aac8b390ba8487a764ad5fbf",
+  "version": "0.5.2",
+  "release_date": "2026-10-31",
+  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.2/TrueRespi-0.5.2-Setup.exe",
+  "portable_url": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.2/TrueRespi-0.5.2-win64-portable.zip",
+  "sha256": "68921fc48a86d352b78e3afef7229d28e25280f3b0e3ea5eef6a790c8940c5f1",
   "min_required_version": "0.5.0",
   "editions": {
     "standard": {
-      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.1/TrueRespi-0.5.1-Setup.exe",
-      "sha256": "5558b7b5b4754b668f86f1bb38a893b19cb48565aac8b390ba8487a764ad5fbf"
+      "sha256": "68921fc48a86d352b78e3afef7229d28e25280f3b0e3ea5eef6a790c8940c5f1",
+      "file": "TrueRespi-0.5.2-Setup.exe",
+      "version": "0.5.2",
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.5.2/TrueRespi-0.5.2-Setup.exe"
     }
   },
-  "release_notes_zh": "v0.5.1 修复版：\n- Excel 导出时间轴正确性：每 1 分钟呼吸表与行为分粒度表（1/3/5/10 分钟）的真实时间标签与数据窗口现在对齐墙钟整分钟（此前秒位非 0 起录时整表错标，按钟点读数会读到错误分钟）\n- 「说明」页改为逐表陈述，不再虚报未产出的工作表\n- 「呼吸指标_每秒」的 n 列改为整数显示；分钟表恢复冻结「真实时间 + 分钟」两列\n- 安装版可直接覆盖 0.5.0（同 AppId，保留用户设置）",
-  "release_notes_en": "v0.5.1 (fix release):\n- Excel export time-axis correctness: the per-minute respiratory table and the behavior granularity tables (1/3/5/10 min) now align data windows to wall-clock whole minutes; previously labels and data disagreed whenever a recording started off-minute\n- The Notes sheet now describes only the sheets actually produced\n- Per-second table n column shown as integer; per-minute table again freezes the time and minute columns\n- Setup upgrades 0.5.0 in place, keeping user settings"
+  "release_notes_zh": "v0.5.2 中文界面与启动行为修复版：\n- 默认界面语言改为中文；补齐 Qt 标准按钮（确定/取消/关闭、向导按钮）中文翻译，安装版不再因缺翻译文件显示英文\n- 修复插件管理器、模型管理、偏好设置等界面显示英文键名的问题；验证报告、AASM 规则、自定义绘图等对话框文案中文化\n- 行为标签在波形标注框、右键菜单、趋势表、图表图例中显示中文名（运动/理毛/嗅探/平静呼吸/睡眠），数据键保持英文以兼容模型与导入导出\n- 启动引导只自动显示一次：无需勾选「不再显示」，之后启动不再弹出；帮助菜单可随时手动重新打开\n- 新版本更新提示同一版本只自动弹出一次（手动「检查更新」不受限）\n- 修复保存偏好设置后启动引导再次弹出（隐藏标记被重置）\n- Excel 附加表样式改为共享样式数组：25h 每秒表建表约 7.4 倍加速、峰值内存约降 198MB，导出内容逐字节不变\n- 呼吸标志比对改二分定位、指纹重采样分块、导出线程低优先级并让出 GIL：长录音导出更快、界面更流畅\n- 修复打开 MKT 文件后选区标注无法导出（行为导出/全部数据导出菜单恒灰）\n- 修复「全部数据」导出在默认设置下缺少「呼吸指标_每秒/_每分钟」两表\n- 安装版可直接覆盖 0.5.1（同 AppId，保留用户设置）",
+  "release_notes_en": "v0.5.2 (Chinese UI and startup behavior fix release):\n- Default UI language is now Chinese; Qt standard buttons (OK/Cancel/Close, wizard buttons) are translated in the installed build\n- Fixed English key names shown in the plugin manager, model manager and preferences; localized validation report, AASM rules and custom plot dialogs\n- The welcome guide is shown automatically only once; no checkbox needed, and it can be reopened from the Help menu\n- The update-available dialog is shown automatically only once per version\n- Saving preferences no longer re-enables the welcome guide\n- Excel extra-sheet styling now shares style arrays: ~7.4x faster build for the 25h per-second sheet and ~198MB lower peak memory, with byte-identical output\n- Faster sigh matching, chunked fingerprint resampling, low-priority export thread with GIL yields: faster long-recording exports and smoother UI\n- Fixed the export menu staying disabled after annotating an MKT selection\n- Fixed the all-data export missing the per-second/per-minute respiratory sheets with default settings\n- The setup upgrades 0.5.1 in place, keeping user settings"
 }
