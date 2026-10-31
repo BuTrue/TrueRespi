@@ -1,2 +1,2 @@
-5558b7b5b4754b668f86f1bb38a893b19cb48565aac8b390ba8487a764ad5fbf  TrueRespi-0.5.1-Setup.exe
-c3d2e7885686c4b3a9323aa5141ca911fb0f1eec731986f20d63221a699f0db9  TrueRespi-0.5.1-win64-portable.zip
+68921fc48a86d352b78e3afef7229d28e25280f3b0e3ea5eef6a790c8940c5f1  TrueRespi-0.5.2-Setup.exe
+e3bd863b4534d90c594fa02c1168602364d313f3c62e3bdcb485a35b9fc4cdaf  TrueRespi-0.5.2-win64-portable.zip
