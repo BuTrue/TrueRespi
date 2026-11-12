@@ -1,0 +1,19 @@
+{
+    "version":  "0.1.0",
+    "release_notes_zh":  "TrueRespi 0.1.0 首个正式版本：波形渲染与缩放优化、后台导出与 AI 预标注、MKT/LabChart 裁剪、Excel 统计汇总、中文安装包与自动更新。",
+    "download_url_windows":  "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe",
+    "min_required_version":  "0.1.0",
+    "editions":  {
+                     "standard":  {
+                                      "sha256":  "92998200fd8759166507c4859dea8b0501e7aa2e2acd58aa9d6f00e7d09be333",
+                                      "download_url_windows":  "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
+                                  },
+                     "ai":  {
+                                "sha256":  "92998200fd8759166507c4859dea8b0501e7aa2e2acd58aa9d6f00e7d09be333",
+                                "download_url_windows":  "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
+                            }
+                 },
+    "release_date":  "2026-11-12",
+    "release_notes_en":  "TrueRespi 0.1.0 first public release: waveform rendering and zoom improvements, background export and AI pre-annotation, MKT/LabChart cropping, Excel summary sheet, Chinese installer and automatic update check.",
+    "sha256":  "92998200fd8759166507c4859dea8b0501e7aa2e2acd58aa9d6f00e7d09be333"
+}
