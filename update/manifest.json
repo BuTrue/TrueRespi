@@ -1,19 +1,19 @@
 {
-  "version": "0.1.0",
-  "release_notes_zh": "新增\n- 新增自动检查更新、自动下载安装包与覆盖安装\n- 新增裁剪与导出统一入口，支持 MKT 与 LabChart\n- 新增标注统计：段数、累计时长、占比\n- 新增正式中文安装包、许可协议和项目文档\n\n改进\n- 统一模型列表，仅保留 Falcon、Heron、Osprey、Swift 四个正式模型\n- 统一模型描述与界面文案\n- 优化波形缩放、后台导出和 AI 预标注\n\n修复\n- 修复 Y 轴缩小卡在 0.4 的问题\n- 修复左键框选时视图自动移动的问题\n- 修复导出对话框长时间占用界面的问题\n\n注意事项\n- 覆盖安装会保留 %APPDATA%\\TrueRespi 中的用户数据\n- 安装包未做商业代码签名，SmartScreen 提示时请核对 SHA256",
-  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe",
+  "version": "0.1.1",
+  "release_notes_zh": "新增\n- 命令行工具 truerespi：list 扫描、crop 文件夹批量导出，支持每小时 TXT\n- MCP 服务 truerespi-mcp：新增 list_recordings / crop_export，可接入 Agent\n- install.ps1：命令行下载、校验 SHA256、静默安装与卸载\n\n改进\n- 安装时自动把安装目录下的 bin 加入 PATH，卸载时移除\n- 批量导出单个文件失败不中断，结果包含 failed / warnings\n- 命令行与桌面共用流式裁剪核心\n\n修复\n- 修复「编辑 → 配色方案」等二级菜单被父级容器裁切\n- 修复 Y 轴手动调整与自动跟随互相抢占\n\n注意事项\n- 安装包未做商业代码签名，SmartScreen 提示时请核对 SHA256\n- TXT 每小时约 50–70 MB（1 kHz 单通道）\n- 覆盖安装会保留 %APPDATA%\\TrueRespi 中的用户数据",
+  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe",
   "min_required_version": "0.1.0",
   "editions": {
     "standard": {
-      "sha256": "4fdb9ad8e75978fb94e8d32779abfa8ba19a5420bf99aa828b93a1a0e9f09ca2",
-      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
+      "sha256": "b5645444d1013d38390ce9902ab867ba5ba90279336d208fbd12e1f032beef22",
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe"
     },
     "ai": {
-      "sha256": "4fdb9ad8e75978fb94e8d32779abfa8ba19a5420bf99aa828b93a1a0e9f09ca2",
-      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
+      "sha256": "b5645444d1013d38390ce9902ab867ba5ba90279336d208fbd12e1f032beef22",
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe"
     }
   },
-  "release_date": "2026-11-12",
-  "release_notes_en": "New\n- Automatic update check, background download and in-place upgrade\n- Unified crop/export entry for MKT and LabChart\n- Annotation statistics: segments, duration and coverage\n- Chinese installer, EULA and project documentation\n\nImproved\n- Curated model list: Falcon, Heron, Osprey and Swift only\n- Unified model and UI descriptions\n- Faster waveform zoom, background export and AI pre-annotation\n\nFixed\n- Y-axis zoom-out getting stuck at 0.4\n- Viewport auto-panning during left-drag selection\n- Export dialog blocking the workspace\n\nNotes\n- In-place upgrade preserves user data under %APPDATA%\\TrueRespi\n- The installer is not commercially code-signed; verify SHA256 if SmartScreen warns",
-  "sha256": "4fdb9ad8e75978fb94e8d32779abfa8ba19a5420bf99aa828b93a1a0e9f09ca2"
+  "release_date": "2026-11-13",
+  "release_notes_en": "New\n- CLI truerespi: list recordings and crop whole folders into hourly TXT\n- MCP server truerespi-mcp: new list_recordings / crop_export tools\n- install.ps1: download, SHA256 verification, silent install and uninstall\n\nImproved\n- The installer adds {app}\\bin to PATH and removes it on uninstall\n- Folder exports continue when one file fails and report failed / warnings\n- CLI and desktop share the same streaming crop core\n\nFixed\n- Secondary menus (Edit -> Color scheme) were clipped by the parent scroll container\n- Manual Y adjustments fought with persistent auto-fit\n\nNotes\n- The installer is not commercially code-signed; verify SHA256 if SmartScreen warns\n- Hourly TXT is roughly 50-70 MB (1 kHz, single channel)\n- In-place upgrade preserves user data under %APPDATA%\\TrueRespi",
+  "sha256": "b5645444d1013d38390ce9902ab867ba5ba90279336d208fbd12e1f032beef22"
 }

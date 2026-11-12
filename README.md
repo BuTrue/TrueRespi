@@ -23,6 +23,7 @@
 <p align="center">
   <a href="#下载与安装">下载</a> ·
   <a href="#核心能力">功能</a> ·
+  <a href="#命令行与-agent-接入">命令行 / Agent</a> ·
   <a href="#正式模型">模型</a> ·
   <a href="#文档">文档</a> ·
   <a href="#更新与覆盖安装">更新</a> ·
@@ -109,6 +110,7 @@ TrueRespi 把小鼠 / 大鼠呼吸实验中最常用的几步放在同一个桌�
 - MKT / LabChart `.adicht` 裁剪
 - 手动区间、绝对时间、每小时、每 X 分钟
 - 后台导出，状态栏实时进度
+- 命令行批量导出与 MCP Agent 接入
 
 </td>
 </tr>
@@ -143,6 +145,46 @@ TrueRespi 把小鼠 / 大鼠呼吸实验中最常用的几步放在同一个桌�
 
 ---
 
+## 命令行与 Agent 接入
+
+安装包同时提供 `truerespi.exe` 与 `truerespi-mcp.exe`，无需打开桌面界面即可批量处理数据。
+
+### 文件夹批量导出：每小时一个 TXT
+
+```powershell
+truerespi list "D:\呼吸数据" --recursive --ext mkt --json
+truerespi crop "D:\呼吸数据" -o "D:\导出\每小时" --every 3600 --format txt --recursive --ext mkt
+```
+
+- 递归处理文件夹内所有 `.mkt`；
+- 每个文件按 3600 秒切分，输出 `原文件名_00-00-00.000.txt`、`原文件名_01-00-00.000.txt`…；
+- 最后一个不足 1 小时的分段也会保留；
+- `--range start:end`、`--at "YYYY-MM-DD HH:MM:SS|HH:MM:SS"` 可指定任意区间；
+- `--format edf` / `--format h5` 可导出其他格式。
+
+### 接入 Agent（MCP）
+
+Claude Desktop、Codex、OpenCode 等支持 MCP 的客户端可以直接加载：
+
+```json
+{
+  "mcpServers": {
+    "truerespi": {
+      "command": "C:\\Users\\<用户名>\\AppData\\Local\\Programs\\TrueRespi\\bin\\truerespi-mcp.exe",
+      "args": []
+    }
+  }
+}
+```
+
+然后可以直接说：
+
+> 把 `D:\呼吸数据` 下所有 mkt 文件每小时导出一个 txt，放到 `D:\导出\每小时`。
+
+完整的 CLI 参数、MCP 工具说明和各客户端配置见 [命令行与 Agent](docs/命令行与Agent.md)。
+
+---
+
 ## 正式模型
 
 软件只展示以下 4 个正式模型；实验网格模型、中间模型和已停用集成模型不会出现在模型选择器中。
@@ -160,12 +202,13 @@ TrueRespi 把小鼠 / 大鼠呼吸实验中最常用的几步放在同一个桌�
 
 ## 下载与安装
 
-### 最新版本：0.1.0
+### 最新版本：0.1.1
 
 | 文件 | 用途 |
 |---|---|
-| [TrueRespi-0.1.0-Setup.exe](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe) | Windows 安装包 |
-| [SHA256SUMS.txt](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/SHA256SUMS.txt) | 安装包校验值 |
+| [TrueRespi-0.1.1-Setup.exe](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe) | Windows 安装包 |
+| [SHA256SUMS.txt](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/SHA256SUMS.txt) | 安装包校验值 |
+| [install.ps1](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/install.ps1) | 命令行下载、校验、静默安装 |
 
 安装步骤：
 
@@ -173,6 +216,14 @@ TrueRespi 把小鼠 / 大鼠呼吸实验中最常用的几步放在同一个桌�
 2. 双击安装，阅读并接受中文许可协议。
 3. 选择安装目录；默认当前用户目录，无需管理员权限。
 4. 安装完成后从开始菜单或桌面快捷方式启动。
+
+命令行静默安装：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/BuTrue/TrueRespi/main/install.ps1 | iex"
+```
+
+安装包会把 `truerespi.exe`（CLI）和 `truerespi-mcp.exe`（MCP stdio 服务）安装到安装目录的 `bin` 子目录，并把该目录加入当前用户 `PATH`。新开终端后可直接运行 `truerespi --version`。
 
 支持覆盖安装：新版本会沿用原安装目录，保留 `%APPDATA%\TrueRespi` 中的用户数据。
 
@@ -211,6 +262,7 @@ TrueRespi 把小鼠 / 大鼠呼吸实验中最常用的几步放在同一个桌�
 | [安装说明](安装说明.md) | 全新安装、覆盖安装、静默安装、卸载与校验 |
 | [使用说明](使用说明.md) | 界面、录制、标注、模型、导出、裁剪与更新 |
 | [快速开始](docs/快速开始.md) | 5 分钟完成一次打开 → 标注 → 导出 |
+| [命令行与 Agent](docs/命令行与Agent.md) | CLI 批量导出、MCP 配置与 Agent 使用示例 |
 | [数据格式与兼容性](docs/数据格式与兼容性.md) | 支持格式、旧项目兼容、已知限制 |
 | [模型说明](docs/模型说明.md) | 四个正式模型、选择建议与运行要求 |
 | [更新与安装](docs/更新与安装.md) | 更新清单、自动下载、覆盖安装与校验 |

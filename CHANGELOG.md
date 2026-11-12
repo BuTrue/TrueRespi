@@ -1,5 +1,35 @@
 # 更新记录
 
+## 0.1.1 — 2026-11-13
+
+### 命令行（CLI）
+
+- 安装包新增 `truerespi.exe`，安装时自动加入当前用户 `PATH`。
+- 新增 `truerespi list`：递归扫描文件夹，列出 MKT/TXT/CSV/EDF/NPZ/H5 等录音；`--probe` 附带采样率、时长和开始时间。
+- `truerespi crop` 支持文件夹输入：逐个文件复用流式裁剪核心，可用 `--recursive`、`--ext mkt` 过滤。
+- 批量导出每小时 TXT：`--every 3600 --format txt --recursive`；最后不足 1 小时的分段也会保留。
+- 批量命名默认 `{stem}_{start}`，自动检测同名文件、输出目录等于输入目录等覆盖风险。
+- `--json` 统一输出 `status/data/error/exit_code`，批量结果包含每个源文件的输出、耗时与失败原因。
+
+### MCP / Agent 接入
+
+- 安装包新增 `truerespi-mcp.exe`，标准 MCP stdio 服务，支持 Claude Desktop、Codex、OpenCode 等客户端。
+- 新增 `list_recordings` 与 `crop_export` 两个 MCP 工具；原有六个工具名称与参数保持兼容。
+- `crop_export` 支持单文件或文件夹、`every` / `ranges` / `at` 三种分段方式、TXT/EDF/H5 输出。
+- 批量导出中单个文件失败不会中断其他文件；返回 `failed` 与 `warnings`，全部失败时标记 `isError`。
+
+### 安装
+
+- 新增 `install.ps1`：命令行下载安装包、校验 SHA256、静默安装/卸载。
+- Inno 安装包支持 `/VERYSILENT` 静默安装，并把安装目录写入用户 `PATH`；卸载时自动移除。
+- 覆盖安装保留原安装目录与 `%APPDATA%\TrueRespi` 用户数据。
+
+### 同时包含
+
+- 波形 Y 轴左侧五个控制按钮：放大、缩小、当前窗口自适应、持续自适应、重置偏移。
+- 按通道手动 Y 范围、p1–p99 稳健拟合、Y 轴拖动平移、切换录制自动复位。
+- 「编辑 → 配色方案」等二级菜单改为内联手风琴，修复被父级滚动容器裁切的问题。
+
 ## 0.1.0 — 2026-11-12
 
 首个正式发布版本。
