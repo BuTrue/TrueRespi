@@ -1,19 +1,19 @@
 {
-    "version":  "0.1.0",
-    "release_notes_zh":  "TrueRespi 0.1.0 首个正式版本：波形渲染与缩放优化、后台导出与 AI 预标注、MKT/LabChart 裁剪、Excel 统计汇总、中文安装包与自动更新。",
-    "download_url_windows":  "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe",
-    "min_required_version":  "0.1.0",
-    "editions":  {
-                     "standard":  {
-                                      "sha256":  "92998200fd8759166507c4859dea8b0501e7aa2e2acd58aa9d6f00e7d09be333",
-                                      "download_url_windows":  "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
-                                  },
-                     "ai":  {
-                                "sha256":  "92998200fd8759166507c4859dea8b0501e7aa2e2acd58aa9d6f00e7d09be333",
-                                "download_url_windows":  "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
-                            }
-                 },
-    "release_date":  "2026-11-12",
-    "release_notes_en":  "TrueRespi 0.1.0 first public release: waveform rendering and zoom improvements, background export and AI pre-annotation, MKT/LabChart cropping, Excel summary sheet, Chinese installer and automatic update check.",
-    "sha256":  "92998200fd8759166507c4859dea8b0501e7aa2e2acd58aa9d6f00e7d09be333"
+  "version": "0.1.0",
+  "release_notes_zh": "新增\n- 新增自动检查更新、自动下载安装包与覆盖安装\n- 新增裁剪与导出统一入口，支持 MKT 与 LabChart\n- 新增标注统计：段数、累计时长、占比\n- 新增正式中文安装包、许可协议和项目文档\n\n改进\n- 统一模型列表，仅保留 Falcon、Heron、Osprey、Swift 四个正式模型\n- 统一模型描述与界面文案\n- 优化波形缩放、后台导出和 AI 预标注\n\n修复\n- 修复 Y 轴缩小卡在 0.4 的问题\n- 修复左键框选时视图自动移动的问题\n- 修复导出对话框长时间占用界面的问题\n\n注意事项\n- 覆盖安装会保留 %APPDATA%\\TrueRespi 中的用户数据\n- 安装包未做商业代码签名，SmartScreen 提示时请核对 SHA256",
+  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe",
+  "min_required_version": "0.1.0",
+  "editions": {
+    "standard": {
+      "sha256": "8a06fdf956e6048ee63c61cb366743130827b2ff37145189ad020b66de34e1d8",
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
+    },
+    "ai": {
+      "sha256": "8a06fdf956e6048ee63c61cb366743130827b2ff37145189ad020b66de34e1d8",
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
+    }
+  },
+  "release_date": "2026-11-12",
+  "release_notes_en": "New\n- Automatic update check, background download and in-place upgrade\n- Unified crop/export entry for MKT and LabChart\n- Annotation statistics: segments, duration and coverage\n- Chinese installer, EULA and project documentation\n\nImproved\n- Curated model list: Falcon, Heron, Osprey and Swift only\n- Unified model and UI descriptions\n- Faster waveform zoom, background export and AI pre-annotation\n\nFixed\n- Y-axis zoom-out getting stuck at 0.4\n- Viewport auto-panning during left-drag selection\n- Export dialog blocking the workspace\n\nNotes\n- In-place upgrade preserves user data under %APPDATA%\\TrueRespi\n- The installer is not commercially code-signed; verify SHA256 if SmartScreen warns",
+  "sha256": "8a06fdf956e6048ee63c61cb366743130827b2ff37145189ad020b66de34e1d8"
 }
