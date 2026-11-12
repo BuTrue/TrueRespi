@@ -48,6 +48,17 @@ function Resolve-Version([string]$Requested) {
     if ($Requested -and $Requested -ne "latest") {
         return $Requested.TrimStart("v", "V")
     }
+    # `main/VERSION` is updated as part of every release and is not subject to
+    # the unauthenticated GitHub API rate limit.
+    try {
+        $text = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/$Repo/main/VERSION" `
+            -UseBasicParsing -TimeoutSec 30).Content
+        if ($text -is [byte[]]) { $text = [System.Text.Encoding]::UTF8.GetString($text) }
+        $value = ($text -split "\s+")[0].Trim().TrimStart("v", "V")
+        if ($value -match "^\d+\.\d+\.\d+") { return $value }
+    } catch {
+        # Fall through to the API below.
+    }
     $release = Invoke-RestMethod -Uri "https://api.github.com/repos/$Repo/releases/latest" `
         -Headers @{ "User-Agent" = "TrueRespi-Installer" } -UseBasicParsing
     if (-not $release.tag_name) {
