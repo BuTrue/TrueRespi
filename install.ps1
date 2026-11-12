@@ -88,6 +88,7 @@ Invoke-WebRequest -Uri "$base/$asset" -OutFile $tempFile -UseBasicParsing
 
 Write-Step "Verifying SHA256"
 $sums = (Invoke-WebRequest -Uri "$base/SHA256SUMS.txt" -UseBasicParsing).Content
+if ($sums -is [byte[]]) { $sums = [System.Text.Encoding]::UTF8.GetString($sums) }
 $expected = ($sums -split "\s+")[0].Trim().ToLowerInvariant()
 $actual = (Get-FileHash -Path $tempFile -Algorithm SHA256).Hash.ToLowerInvariant()
 if ($expected -ne $actual) {
