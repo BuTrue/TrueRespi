@@ -5,15 +5,15 @@
   "min_required_version": "0.1.0",
   "editions": {
     "standard": {
-      "sha256": "a5f7dc05dd59cb18566baa85ed81173dedc15f982e262d0dee72e5aadf8c7e50",
+      "sha256": "d480bab834f8db5d307210c9b747e47625986dc53f55840a1a2468d201400abd",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
     },
     "ai": {
-      "sha256": "a5f7dc05dd59cb18566baa85ed81173dedc15f982e262d0dee72e5aadf8c7e50",
+      "sha256": "d480bab834f8db5d307210c9b747e47625986dc53f55840a1a2468d201400abd",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.0/TrueRespi-0.1.0-Setup.exe"
     }
   },
   "release_date": "2026-11-12",
   "release_notes_en": "New\n- Automatic update check, background download and in-place upgrade\n- Unified crop/export entry for MKT and LabChart\n- Annotation statistics: segments, duration and coverage\n- Chinese installer, EULA and project documentation\n\nImproved\n- Curated model list: Falcon, Heron, Osprey and Swift only\n- Unified model and UI descriptions\n- Faster waveform zoom, background export and AI pre-annotation\n\nFixed\n- Y-axis zoom-out getting stuck at 0.4\n- Viewport auto-panning during left-drag selection\n- Export dialog blocking the workspace\n\nNotes\n- In-place upgrade preserves user data under %APPDATA%\\TrueRespi\n- The installer is not commercially code-signed; verify SHA256 if SmartScreen warns",
-  "sha256": "a5f7dc05dd59cb18566baa85ed81173dedc15f982e262d0dee72e5aadf8c7e50"
+  "sha256": "d480bab834f8db5d307210c9b747e47625986dc53f55840a1a2468d201400abd"
 }
