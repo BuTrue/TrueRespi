@@ -5,15 +5,15 @@
   "min_required_version": "0.1.0",
   "editions": {
     "standard": {
-      "sha256": "b5645444d1013d38390ce9902ab867ba5ba90279336d208fbd12e1f032beef22",
+      "sha256": "683c4a434be4497cc86ee8f8b1feb8225753b275b83ab912fdc054980bef3ebf",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe"
     },
     "ai": {
-      "sha256": "b5645444d1013d38390ce9902ab867ba5ba90279336d208fbd12e1f032beef22",
+      "sha256": "683c4a434be4497cc86ee8f8b1feb8225753b275b83ab912fdc054980bef3ebf",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe"
     }
   },
   "release_date": "2026-11-13",
   "release_notes_en": "New\n- CLI truerespi: list recordings and crop whole folders into hourly TXT\n- MCP server truerespi-mcp: new list_recordings / crop_export tools\n- install.ps1: download, SHA256 verification, silent install and uninstall\n\nImproved\n- The installer adds {app}\\bin to PATH and removes it on uninstall\n- Folder exports continue when one file fails and report failed / warnings\n- CLI and desktop share the same streaming crop core\n\nFixed\n- Secondary menus (Edit -> Color scheme) were clipped by the parent scroll container\n- Manual Y adjustments fought with persistent auto-fit\n\nNotes\n- The installer is not commercially code-signed; verify SHA256 if SmartScreen warns\n- Hourly TXT is roughly 50-70 MB (1 kHz, single channel)\n- In-place upgrade preserves user data under %APPDATA%\\TrueRespi",
-  "sha256": "b5645444d1013d38390ce9902ab867ba5ba90279336d208fbd12e1f032beef22"
+  "sha256": "683c4a434be4497cc86ee8f8b1feb8225753b275b83ab912fdc054980bef3ebf"
 }
