@@ -26,7 +26,7 @@
     irm https://raw.githubusercontent.com/BuTrue/TrueRespi/main/install.ps1 | iex
 
 .EXAMPLE
-    .\install.ps1 -Version 0.1.2 -InstallDir D:\Apps\TrueRespi
+    .\install.ps1 -Version 0.1.3 -InstallDir D:\Apps\TrueRespi
 #>
 [CmdletBinding()]
 param(
