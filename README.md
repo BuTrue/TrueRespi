@@ -170,7 +170,7 @@ Claude Desktop、Codex、OpenCode 等支持 MCP 的客户端可以直接加载�
 {
   "mcpServers": {
     "truerespi": {
-      "command": "C:\\Users\\<用户名>\\AppData\\Local\\TrueRespi\\bin\\truerespi-mcp.exe",
+      "command": "C:\\Users\\<用户名>\\AppData\\Local\\Programs\\TrueRespi\\bin\\truerespi-mcp.exe",
       "args": []
     }
   }

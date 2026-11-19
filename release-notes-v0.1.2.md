@@ -18,5 +18,5 @@
 - 安装包未使用商业代码签名证书；SmartScreen 提示「未知发布者」时请核对 SHA256。
 - 覆盖安装保留 `%APPDATA%\TrueRespi` 中的项目、标注与偏好设置。
 - 已安装 0.1.1 的用户会在启动后自动检查本版本，并在后台完成下载；在「帮助 → 检查更新」中可手动触发并安装。
-- **安装包已从 Inno Setup 换成 NSIS。** 0.1.1 的用户请先卸载旧版再安装 0.1.2，否则会留下两份程序；卸载不会删除 `%APPDATA%\TrueRespi` 中的项目与偏好设置。
-- 命令行工具（`truerespi.exe`、`truerespi-mcp.exe`）仍在安装目录的 `bin` 子目录；本版本不再自动把它们加入 PATH。
+- 安装包仍为 Inno Setup 7 制作，AppId 与安装目录不变，可直接覆盖安装 0.1.1。
+- 命令行工具（`truerespi.exe`、`truerespi-mcp.exe`）仍在安装目录的 `bin` 子目录，安装时自动加入当前用户 PATH。

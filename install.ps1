@@ -4,18 +4,17 @@
     Install TrueRespi from the command line (Windows 10/11 x64).
 
 .DESCRIPTION
-    Downloads the official NSIS installer, verifies its SHA256 against the
-    release checksum file, then runs a silent per-user install.
-    The command line tools `truerespi.exe` (CLI) and `truerespi-mcp.exe`
-    (MCP stdio server) are installed under <InstallDir>\bin; add that folder
-    to PATH yourself if you want them available from any terminal.
+    Downloads the official Inno Setup installer, verifies its SHA256 against
+    the release checksum file, then runs a silent per-user install.
+    The installer adds both `truerespi.exe` (CLI) and `truerespi-mcp.exe`
+    (MCP stdio server) to the current user's PATH.
 
 .PARAMETER Version
     Release tag without the leading "v" (default: latest release).
 
 .PARAMETER InstallDir
     Optional install directory. Defaults to the installer's per-user location,
-    %LOCALAPPDATA%\TrueRespi.
+    %LOCALAPPDATA%\Programs\TrueRespi.
 
 .PARAMETER Uninstall
     Run the uninstaller from InstallDir instead of installing.
@@ -70,18 +69,20 @@ function Resolve-Version([string]$Requested) {
 
 function Get-InstallDir([string]$Explicit) {
     if ($Explicit) { return [System.IO.Path]::GetFullPath($Explicit) }
-    return Join-Path $env:LOCALAPPDATA "TrueRespi"
+    return Join-Path $env:LOCALAPPDATA "Programs\TrueRespi"
 }
 
 $targetDir = Get-InstallDir $InstallDir
 
 if ($Uninstall) {
-    $uninstaller = Join-Path $targetDir "uninstall.exe"
+    $uninstaller = Join-Path $targetDir "unins000.exe"
     if (-not (Test-Path $uninstaller)) {
         throw "Uninstaller not found: $uninstaller"
     }
     Write-Step "Uninstalling TrueRespi from $targetDir"
-    $process = Start-Process -FilePath $uninstaller -ArgumentList "/S" -PassThru -Wait
+    $process = Start-Process -FilePath $uninstaller `
+        -ArgumentList "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART" `
+        -PassThru -Wait
     if ($process.ExitCode -ne 0) { throw "Uninstall failed with exit code $($process.ExitCode)." }
     Write-Step "TrueRespi uninstalled."
     return
@@ -105,10 +106,8 @@ if ($expected -ne $actual) {
     throw "SHA256 mismatch: expected $expected, got $actual. The download was discarded."
 }
 
-# NSIS: /S runs the installer silently. /D=<dir> must be the last argument and
-# must not be quoted; without it the installer uses its default per-user dir.
-$arguments = @("/S")
-if ($InstallDir) { $arguments += "/D=$targetDir" }
+$arguments = @("/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART")
+if ($InstallDir) { $arguments += "/DIR=`"$targetDir`"" }
 
 Write-Step "Running silent installer"
 $process = Start-Process -FilePath $tempFile -ArgumentList $arguments -PassThru -Wait
@@ -118,27 +117,14 @@ Remove-Item -Path $tempFile -Force -ErrorAction SilentlyContinue
 $cli = Join-Path $targetDir "bin\truerespi.exe"
 $mcp = Join-Path $targetDir "bin\truerespi-mcp.exe"
 if (-not (Test-Path $cli)) {
-    # An earlier version may already be installed in a custom directory.
-    $roots = @(
-        "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall",
-        "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall",
-        "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall"
-    )
-    foreach ($root in $roots) {
-        if (-not (Test-Path $root)) { continue }
-        $entry = Get-ChildItem $root -ErrorAction SilentlyContinue |
-            ForEach-Object { Get-ItemProperty $_.PSPath -ErrorAction SilentlyContinue } |
-            Where-Object { $_.DisplayName -like "TrueRespi*" } |
-            Select-Object -First 1
-        if ($entry -and $entry.InstallLocation) {
-            $candidate = $entry.InstallLocation.TrimEnd("\")
-            $candidateCli = Join-Path $candidate "bin\truerespi.exe"
-            if (Test-Path $candidateCli) {
-                $targetDir = $candidate
-                $cli = $candidateCli
-                $mcp = Join-Path $candidate "bin\truerespi-mcp.exe"
-                break
-            }
+    # Overwrite installs may reuse a custom directory chosen earlier.
+    $uninstallKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\{A1B2C3D4-6E7F-4A8B-9C0D-1E2F3A4B5C6D}_is1"
+    if (Test-Path $uninstallKey) {
+        $location = (Get-ItemProperty -Path $uninstallKey -ErrorAction SilentlyContinue).InstallLocation
+        if ($location) {
+            $targetDir = $location.TrimEnd("\")
+            $cli = Join-Path $targetDir "bin\truerespi.exe"
+            $mcp = Join-Path $targetDir "bin\truerespi-mcp.exe"
         }
     }
 }
@@ -149,8 +135,7 @@ if (-not (Test-Path $cli)) {
 Write-Step "Installed to $targetDir"
 if (-not $Quiet) {
     Write-Host ""
-    Write-Host "Command line tools: $targetDir\bin" -ForegroundColor Green
-    Write-Host "Add that folder to PATH, then try:"
+    Write-Host "Open a new terminal, then try:" -ForegroundColor Green
     Write-Host "  truerespi --version"
     Write-Host "  truerespi list `"D:\your-data`" --recursive --ext mkt --json"
     Write-Host "  truerespi crop `"D:\your-data`" -o `"D:\export`" --every 3600 --format txt --recursive"

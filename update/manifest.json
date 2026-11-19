@@ -5,15 +5,15 @@
   "min_required_version": "0.1.0",
   "editions": {
     "standard": {
-      "sha256": "49d68393f22e7325f1ebb792731aae2e1534f628e672c1a4075a27f28b2b145c",
+      "sha256": "1af651ce4377742e5bc86c071d92ce32ed880ccad0b12f9f6422d50538e9f3c4",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/TrueRespi-0.1.2-Setup.exe"
     },
     "ai": {
-      "sha256": "49d68393f22e7325f1ebb792731aae2e1534f628e672c1a4075a27f28b2b145c",
+      "sha256": "1af651ce4377742e5bc86c071d92ce32ed880ccad0b12f9f6422d50538e9f3c4",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/TrueRespi-0.1.2-Setup.exe"
     }
   },
   "release_date": "2026-11-19",
   "release_notes_en": "New and fixed\n- Batch crop dialog: time inputs no longer reformat on every keystroke, so the end time can be typed\n- Real clock times are converted to recording offsets inside the dialog; preview, file names and output agree\n- Overnight recordings accept next-day times, or a full date to remove the ambiguity\n- Out-of-range, reversed and malformed entries are reported under each range\n\nImproved\n- Split modes renamed to Recording time / Real time, with length and cross-reference shown per range\n- Real-time defaults start at the recording header time, milliseconds included\n\nNotes\n- The installer is now NSIS; uninstall 0.1.1 before installing this version\n- CLI tools ship in <install dir>\\bin and are no longer added to PATH automatically",
-  "sha256": "49d68393f22e7325f1ebb792731aae2e1534f628e672c1a4075a27f28b2b145c"
+  "sha256": "1af651ce4377742e5bc86c071d92ce32ed880ccad0b12f9f6422d50538e9f3c4"
 }
