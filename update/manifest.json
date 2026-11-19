@@ -1,19 +1,19 @@
 {
-  "version": "0.1.1",
-  "release_notes_zh": "新增\n- 命令行工具 truerespi：list 扫描、crop 文件夹批量导出，支持每小时 TXT\n- MCP 服务 truerespi-mcp：新增 list_recordings / crop_export，可接入 Agent\n- install.ps1：命令行下载、校验 SHA256、静默安装与卸载\n\n改进\n- 安装时自动把安装目录下的 bin 加入 PATH，卸载时移除\n- 批量导出单个文件失败不中断，结果包含 failed / warnings\n- 命令行与桌面共用流式裁剪核心\n\n修复\n- 修复「编辑 → 配色方案」等二级菜单被父级容器裁切\n- 修复 Y 轴手动调整与自动跟随互相抢占\n\n注意事项\n- 安装包未做商业代码签名，SmartScreen 提示时请核对 SHA256\n- TXT 每小时约 50–70 MB（1 kHz 单通道）\n- 覆盖安装会保留 %APPDATA%\\TrueRespi 中的用户数据",
-  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe",
+  "version": "0.1.2",
+  "release_notes_zh": "新增与修复\n- 批量裁剪与导出：时间输入重做，开始与结束时间都能完整输入，不再数字乱跳\n- 真实时间（墙上时间）在对话框内换算成录制内秒数，预览、文件名与写盘一致\n- 通宵录制支持次日时间，也可写完整日期消除歧义\n- 越界、顺序与格式错误在区间下方直接提示\n\n改进\n- 分割方式改名：录制时间 / 真实时间，每行显示时长与两种口径的换算\n- 真实时间默认区间从录制表头实际起始时刻（含毫秒）起算\n\n注意\n- 安装包改为 NSIS；0.1.1 用户请先卸载旧版再安装本版本\n- 命令行工具在安装目录 bin 子目录，本版本不再自动加入 PATH",
+  "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/TrueRespi-0.1.2-Setup.exe",
   "min_required_version": "0.1.0",
   "editions": {
     "standard": {
-      "sha256": "683c4a434be4497cc86ee8f8b1feb8225753b275b83ab912fdc054980bef3ebf",
-      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe"
+      "sha256": "49d68393f22e7325f1ebb792731aae2e1534f628e672c1a4075a27f28b2b145c",
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/TrueRespi-0.1.2-Setup.exe"
     },
     "ai": {
-      "sha256": "683c4a434be4497cc86ee8f8b1feb8225753b275b83ab912fdc054980bef3ebf",
-      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe"
+      "sha256": "49d68393f22e7325f1ebb792731aae2e1534f628e672c1a4075a27f28b2b145c",
+      "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/TrueRespi-0.1.2-Setup.exe"
     }
   },
-  "release_date": "2026-11-13",
-  "release_notes_en": "New\n- CLI truerespi: list recordings and crop whole folders into hourly TXT\n- MCP server truerespi-mcp: new list_recordings / crop_export tools\n- install.ps1: download, SHA256 verification, silent install and uninstall\n\nImproved\n- The installer adds {app}\\bin to PATH and removes it on uninstall\n- Folder exports continue when one file fails and report failed / warnings\n- CLI and desktop share the same streaming crop core\n\nFixed\n- Secondary menus (Edit -> Color scheme) were clipped by the parent scroll container\n- Manual Y adjustments fought with persistent auto-fit\n\nNotes\n- The installer is not commercially code-signed; verify SHA256 if SmartScreen warns\n- Hourly TXT is roughly 50-70 MB (1 kHz, single channel)\n- In-place upgrade preserves user data under %APPDATA%\\TrueRespi",
-  "sha256": "683c4a434be4497cc86ee8f8b1feb8225753b275b83ab912fdc054980bef3ebf"
+  "release_date": "2026-11-19",
+  "release_notes_en": "New and fixed\n- Batch crop dialog: time inputs no longer reformat on every keystroke, so the end time can be typed\n- Real clock times are converted to recording offsets inside the dialog; preview, file names and output agree\n- Overnight recordings accept next-day times, or a full date to remove the ambiguity\n- Out-of-range, reversed and malformed entries are reported under each range\n\nImproved\n- Split modes renamed to Recording time / Real time, with length and cross-reference shown per range\n- Real-time defaults start at the recording header time, milliseconds included\n\nNotes\n- The installer is now NSIS; uninstall 0.1.1 before installing this version\n- CLI tools ship in <install dir>\\bin and are no longer added to PATH automatically",
+  "sha256": "49d68393f22e7325f1ebb792731aae2e1534f628e672c1a4075a27f28b2b145c"
 }

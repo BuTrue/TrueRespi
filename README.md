@@ -170,7 +170,7 @@ Claude Desktop、Codex、OpenCode 等支持 MCP 的客户端可以直接加载�
 {
   "mcpServers": {
     "truerespi": {
-      "command": "C:\\Users\\<用户名>\\AppData\\Local\\Programs\\TrueRespi\\bin\\truerespi-mcp.exe",
+      "command": "C:\\Users\\<用户名>\\AppData\\Local\\TrueRespi\\bin\\truerespi-mcp.exe",
       "args": []
     }
   }
@@ -202,13 +202,13 @@ Claude Desktop、Codex、OpenCode 等支持 MCP 的客户端可以直接加载�
 
 ## 下载与安装
 
-### 最新版本：0.1.1
+### 最新版本：0.1.2
 
 | 文件 | 用途 |
 |---|---|
-| [TrueRespi-0.1.1-Setup.exe](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/TrueRespi-0.1.1-Setup.exe) | Windows 安装包 |
-| [SHA256SUMS.txt](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/SHA256SUMS.txt) | 安装包校验值 |
-| [install.ps1](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.1/install.ps1) | 命令行下载、校验、静默安装 |
+| [TrueRespi-0.1.2-Setup.exe](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/TrueRespi-0.1.2-Setup.exe) | Windows 安装包 |
+| [SHA256SUMS.txt](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/SHA256SUMS.txt) | 安装包校验值 |
+| [install.ps1](https://github.com/BuTrue/TrueRespi/releases/download/v0.1.2/install.ps1) | 命令行下载、校验、静默安装 |
 
 安装步骤：
 

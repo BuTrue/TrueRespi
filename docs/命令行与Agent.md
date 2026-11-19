@@ -1,6 +1,6 @@
 # 命令行与 Agent 接入
 
-TrueRespi 从 **0.1.1** 起随安装包提供两个命令行程序，安装时会自动加入当前用户的 `PATH`：
+TrueRespi 从 **0.1.1** 起随安装包提供两个命令行程序；0.1.2 起安装包改用 NSIS，工具位于安装目录的 `bin` 子目录，不再自动写入 `PATH`：
 
 | 程序 | 用途 |
 |---|---|
@@ -9,29 +9,29 @@ TrueRespi 从 **0.1.1** 起随安装包提供两个命令行程序，安装时�
 
 两者与桌面版共用同一套 Rust 流式裁剪核心，不需要打开图形界面，也不会把数据上传到网络。
 
-> 实际文件位于安装目录的 `bin` 子目录（例如 `%LOCALAPPDATA%\Programs\TrueRespi\bin\truerespi.exe`）；安装程序只把该 `bin` 目录加入 `PATH`，与桌面的 `TrueRespi.exe` 互不冲突。
+> 实际文件位于安装目录的 `bin` 子目录（例如 `%LOCALAPPDATA%\TrueRespi\bin\truerespi.exe`）；安装程序只把该 `bin` 目录加入 `PATH`，与桌面的 `TrueRespi.exe` 互不冲突。
 
 ---
 
 ## 一、命令行安装
 
-安装包本身支持 Inno Setup 的静默参数：
+安装包本身支持 NSIS 的静默参数：
 
 ```powershell
-.\TrueRespi-0.1.1-Setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+.\TrueRespi-0.1.2-Setup.exe /S
 ```
 
 也可以直接用官方脚本下载、校验 SHA256 并静默安装：
 
 ```powershell
-# 安装最新版（默认安装到 %LOCALAPPDATA%\Programs\TrueRespi）
+# 安装最新版（默认安装到 %LOCALAPPDATA%\TrueRespi）
 powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/BuTrue/TrueRespi/main/install.ps1 | iex"
 ```
 
 指定版本和目录：
 
 ```powershell
-.\install.ps1 -Version 0.1.1 -InstallDir D:\Apps\TrueRespi
+.\install.ps1 -Version 0.1.2 -InstallDir D:\Apps\TrueRespi
 ```
 
 卸载：
@@ -47,7 +47,7 @@ truerespi --version
 truerespi-mcp --help
 ```
 
-> 已经开着的终端不会自动刷新 `PATH`；重新打开即可。
+> 把 `<安装目录>in` 加入 `PATH` 后，已经开着的终端需要重新打开才会生效。
 
 ---
 
@@ -182,7 +182,7 @@ truerespi analyze "D:\呼吸数据\2.mkt" -o "D:\导出\2_behavior.xlsx" --json
 {
   "mcpServers": {
     "truerespi": {
-      "command": "C:\\Users\\<用户名>\\AppData\\Local\\Programs\\TrueRespi\\bin\\truerespi-mcp.exe",
+      "command": "C:\\Users\\<用户名>\\AppData\\Local\\TrueRespi\\bin\\truerespi-mcp.exe",
       "args": []
     }
   }
@@ -197,7 +197,7 @@ truerespi analyze "D:\呼吸数据\2.mkt" -o "D:\导出\2_behavior.xlsx" --json
 
 ```toml
 [mcp_servers.truerespi]
-command = "C:\\Users\\<用户名>\\AppData\\Local\\Programs\\TrueRespi\\bin\\truerespi-mcp.exe"
+command = "C:\\Users\\<用户名>\\AppData\\Local\\TrueRespi\\bin\\truerespi-mcp.exe"
 args = []
 ```
 
@@ -212,7 +212,7 @@ args = []
     "truerespi": {
       "type": "local",
       "command": [
-        "C:\\Users\\<用户名>\\AppData\\Local\\Programs\\TrueRespi\\bin\\truerespi-mcp.exe"
+        "C:\\Users\\<用户名>\\AppData\\Local\\TrueRespi\\bin\\truerespi-mcp.exe"
       ],
       "enabled": true
     }
