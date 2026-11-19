@@ -1,19 +1,19 @@
 {
   "version": "0.1.3",
-  "release_notes_zh": "修复：应用内自动更新在网络慢或抖动时下载失败\n- 更新包下载不再因连接被重置而失败：从已下载字节处断点续传，最多 24 次尝试，间隔逐步放宽到 6 秒\n- 下载使用独立的超时预算（连接 20 秒、等待响应 60 秒、单次读取 60 秒，无总时长限制）\n- 下载完成按 SHA-256 校验，校验通过才启动安装程序\n- 连接在最后一个字节之后才断开时直接校验已下载内容，不再误报失败\n- 更新检查的清单请求超时从 5 秒放宽到 15 秒，失败时最多重试 3 轮\n\n包含 0.1.2 的内容\n- 批量裁剪与导出：开始与结束时间都能完整输入，不再数字乱跳\n- 分割方式改为 录制时间 / 真实时间，每行显示时长与两种口径的换算\n- 真实时间在对话框内换算成录制内秒数，通宵录制支持次日时间，也可写完整日期\n\n说明\n- 安装包由 Inno Setup 7 制作，可直接覆盖安装，用户数据保留在 %APPDATA%\\TrueRespi",
+  "release_notes_zh": "修复：应用内自动更新在网络慢或抖动时下载失败\n- 更新包下载不再因连接被重置而失败：从已下载字节处断点续传，最多 24 次尝试，间隔逐步放宽到 6 秒\n- 下载使用独立的超时预算（连接 20 秒、等待响应 60 秒、单次读取 60 秒，无总时长限制）\n- 下载完成按 SHA-256 校验，校验通过才启动安装程序\n- 连接在最后一个字节之后才断开时直接校验已下载内容，不再误报失败\n- 更新检查的清单请求超时从 5 秒放宽到 15 秒，失败时最多重试 3 轮\n- 代理软件本身无法连接 GitHub 时，清单与安装包请求自动改用直连重试（仍校验 SHA-256）\n\n包含 0.1.2 的内容\n- 批量裁剪与导出：开始与结束时间都能完整输入，不再数字乱跳\n- 分割方式改为 录制时间 / 真实时间，每行显示时长与两种口径的换算\n- 真实时间在对话框内换算成录制内秒数，通宵录制支持次日时间，也可写完整日期\n\n说明\n- 安装包由 Inno Setup 7 制作，可直接覆盖安装，用户数据保留在 %APPDATA%\\TrueRespi",
   "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.3/TrueRespi-0.1.3-Setup.exe",
   "min_required_version": "0.1.0",
   "editions": {
     "standard": {
-      "sha256": "7283df283affcaee21810217acd8fd48166e96a6d4fdc5c854d955c4978ba623",
+      "sha256": "7cdf76e6208c7c6c7c3c84edd93e8e9240549e271c71cddb63a6efa3e6540dd7",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.3/TrueRespi-0.1.3-Setup.exe"
     },
     "ai": {
-      "sha256": "7283df283affcaee21810217acd8fd48166e96a6d4fdc5c854d955c4978ba623",
+      "sha256": "7cdf76e6208c7c6c7c3c84edd93e8e9240549e271c71cddb63a6efa3e6540dd7",
       "download_url_windows": "https://github.com/BuTrue/TrueRespi/releases/download/v0.1.3/TrueRespi-0.1.3-Setup.exe"
     }
   },
   "release_date": "2026-11-19",
-  "release_notes_en": "Fixed: in-app auto-update failed to download on a slow or unstable link\n- The installer download now resumes from the bytes already received after a dropped connection: up to 24 attempts with the delay widening to 6 s\n- Downloads use their own timeout budget (20 s connect, 60 s to first response, 60 s per read, no total limit)\n- The finished download is verified with SHA-256 before the installer is launched\n- A connection that drops after the final byte no longer fails the update; the bytes on disk are verified directly\n- The update-check manifest request now allows 15 s instead of 5 s and retries up to 3 rounds\n\nIncludes the 0.1.2 changes\n- Batch crop dialog: start and end times can both be typed without characters jumping\n- Split modes renamed to Recording time / Real time, with length and cross-reference per range\n- Real clock times are converted to recording offsets in the dialog; overnight times and explicit dates are accepted\n\nNotes\n- The installer is built with Inno Setup 7 and installs over an existing copy; user data stays in %APPDATA%\\TrueRespi",
-  "sha256": "7283df283affcaee21810217acd8fd48166e96a6d4fdc5c854d955c4978ba623"
+  "release_notes_en": "Fixed: in-app auto-update failed to download on a slow or unstable link\n- The installer download now resumes from the bytes already received after a dropped connection: up to 24 attempts with the delay widening to 6 s\n- Downloads use their own timeout budget (20 s connect, 60 s to first response, 60 s per read, no total limit)\n- The finished download is verified with SHA-256 before the installer is launched\n- A connection that drops after the final byte no longer fails the update; the bytes on disk are verified directly\n- The update-check manifest request now allows 15 s instead of 5 s and retries up to 3 rounds\n- If the configured proxy cannot reach GitHub, requests retry without the proxy (the installer is still verified by SHA-256)\n\nIncludes the 0.1.2 changes\n- Batch crop dialog: start and end times can both be typed without characters jumping\n- Split modes renamed to Recording time / Real time, with length and cross-reference per range\n- Real clock times are converted to recording offsets in the dialog; overnight times and explicit dates are accepted\n\nNotes\n- The installer is built with Inno Setup 7 and installs over an existing copy; user data stays in %APPDATA%\\TrueRespi",
+  "sha256": "7cdf76e6208c7c6c7c3c84edd93e8e9240549e271c71cddb63a6efa3e6540dd7"
 }
