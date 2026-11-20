@@ -18,7 +18,7 @@ TrueRespi 从 **0.1.1** 起随安装包提供两个命令行程序，安装时�
 安装包本身支持 Inno Setup 的静默参数：
 
 ```powershell
-.\TrueRespi-0.1.3-Setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+.\TrueRespi-0.1.4-Setup.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 ```
 
 也可以直接用官方脚本下载、校验 SHA256 并静默安装：
@@ -31,7 +31,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubus
 指定版本和目录：
 
 ```powershell
-.\install.ps1 -Version 0.1.3 -InstallDir D:\Apps\TrueRespi
+.\install.ps1 -Version 0.1.4 -InstallDir D:\Apps\TrueRespi
 ```
 
 卸载：
